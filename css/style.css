@@ -274,24 +274,31 @@ div, section {
     display: none;
 }
 
-input[type="text"]::-moz-placeholder {
+input[type="number"]::-moz-placeholder {
     color: rgb(239, 222, 161); /* Цвет подсказывающего текста */
 }
 
-input[type="text"]::-webkit-input-placeholder {
+input[type="number"]::-webkit-input-placeholder {
     color: rgb(239, 222, 161);
 }
 
-input[type="text"]:-ms-input-placeholder {
+input[type="number"]:-ms-input-placeholder {
     color: rgb(239, 222, 161);
 }
 
-input[type="text"]::-ms-input-placeholder {
+input[type="number"]::-ms-input-placeholder {
     color: rgb(239, 222, 161);
 }
 
-input[type="text"]::placeholder {
+input[type="number"]::placeholder {
     color: rgb(239, 222, 161);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 .wellcome-block__date-item__text {
