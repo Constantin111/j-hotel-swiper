@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'SONGERT_G_Bold';
+    src: url('SONGERT_G_Bold.otf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'SONGERT_G_ExtraBold';
+    src: url('SONGERT_G_ExtraBold.otf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'SONGERT_G_Heavy';
+    src: url('SONGERT_G_Heavy.otf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'SONGERT_G_Medium.otf';
+    src: url('SONGERT_G_Medium.otf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'SONGERT_G_Regular';
+    src: url('SONGERT_G_Regular.otf');
+    font-weight: normal;
+}

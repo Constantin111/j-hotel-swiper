@@ -1,0 +1,273 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swiper-bundel.css">
+    <link rel="stylesheet" href="css/fullpage.min.css">
+    <link rel="stylesheet" href="css/soon.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-style.css">
+
+    <script src="js/soon.min.js"></script>
+    <meta name="theme-color" content="#fafafa">
+
+
+    <script type="text/javascript">
+        timeend = new Date(2020, 06, 30, 19, 00);
+        // IE и FF по разному отрабатывают getYear()
+        //timeend = new Date(timeend.getYear() > 1900 ? (timeend.getYear() + 1) : (timeend.getYear() + 1901), 0, 1);
+        // для задания обратного отсчета до определенной даты укажите дату в формате:
+        // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ);
+        // Для задания даты с точностью до времени укажите дату в формате:
+        // timeend= new Date(ГОД, МЕСЯЦ-1, ДЕНЬ, ЧАСЫ-1, МИНУТЫ);
+        function time() {
+            today = new Date();
+            today = Math.floor((timeend - today) / 1000);
+            tsec = today % 60;
+            today = Math.floor(today / 60);
+            if (tsec < 10) tsec = '0' + tsec;
+            tmin = today % 60;
+            today = Math.floor(today / 60);
+            if (tmin < 10) tmin = '0' + tmin;
+            thour = today % 24;
+            today = Math.floor(today / 24);
+            timestr = today + " дня " + thour + " часов " + tmin + " минут " + tsec + " секунд";
+            document.getElementById('t').innerHTML = timestr;
+            window.setTimeout("time()", 1000);
+        }
+    </script>
+
+</head>
+
+
+<body onload="time()">
+
+<div class="wrap global-wrap">
+    <div class="wrap section-wrap">
+        <div class="age-gate__block active">
+            <div class="block-wrap wellcome-block">
+                <div class="wellcome-block__title">
+                    <div class="d_flex align_items justify_center wellcome-block__title-text">
+                        Добро пожаловать
+                    </div>
+                    <div class="d_flex align_items justify_center wellcome-block__title-logo">
+                        <img src="img/logo-1.png" alt="">
+                    </div>
+                    <div class="d_flex align_items justify_center wellcome-block__title-description">
+                        Введите дату вашего рождения
+                    </div>
+                </div>
+                <div class="wellcome-block__date">
+
+                    <form action="" class="date-old">
+                        <div class="d_flex justify_center align_items wellcome-block__date-items">
+                            <div class="wellcome-block__date-item">
+                                <div class="d_flex justify_center align_items wellcome-block__date-item__input">
+                                    <input type="text" maxlength="2" id="oldDay" name="oldDay" placeholder="ДД"
+                                           autofocus autocomplete="off">
+                                </div>
+                                <div class="wellcome-block__date-item__text">
+                                    День
+                                </div>
+                            </div>
+                            <div class="wellcome-block__date-item">
+                                <div class="d_flex justify_center align_items wellcome-block__date-item__input">
+                                    <input tabindex="1" type="text" maxlength="2" id="oldMonth" name="oldMonth"
+                                           placeholder="ММ" autocomplete="off">
+                                </div>
+                                <div class="wellcome-block__date-item__text">
+                                    Месяц
+                                </div>
+                            </div>
+                            <div class="wellcome-block__date-item">
+                                <div class="d_flex justify_center align_items wellcome-block__date-item__input">
+                                    <input tabindex="2" type="text" maxlength="4" min="1910" max="2020" step="1"
+                                           id="oldYear"
+                                           name="oldYear" placeholder="ГГГГ" autocomplete="off">
+                                </div>
+                                <div class="wellcome-block__date-item__text">
+                                    Год
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="wellcome-block__date-acces">
+                        <div class="d_flex justify_center align_items wellcome-block__date-acces__block">
+                            <div class="d_flex justify_center align_items wellcome-block__date-acces__btn">
+                                Подтвердить
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="wellcome-block__attention">
+                    <div class="wellcome-block__attention-text">
+                        Нажимая кнопку «Подтвердить»,<br>
+                        вы соглашаетесь перейти на сайт, содержащий<br>
+                        информацию об алкогольной продукции
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="fullpage" class="main post-age-gate__block post-age-gate__block-descktop">
+
+
+
+
+
+            <!-- mob section -->
+
+
+            <!-- mob section end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $('body').ready(function () {
+
+        if ($(window).width() <= '770') {
+            $('.post-age-gate__block-descktop').remove();
+        } else {
+            $('.post-age-gate__block-mob').remove()
+        }
+    });
+</script>
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<!--<script src="js/swiper-bundle.js"></script>-->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/fullpage.js"></script>
+
+<script src="js/main.js"></script>
+
+<script>
+
+    var swiperV = new Swiper('.swiper-container-v', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+            el: '.swiper-pagination-v',
+            clickable: true,
+        },
+    });
+
+    var swiperH = new Swiper('.swiper-container1', {
+        loop: true,
+        keyboard: {
+            enabled: true,
+        },
+        pagination: {
+            el: '.swiper-pagination1',
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+</script>
+
+<!--<script>
+    var swiperH = new Swiper('.swiper-container-h', {
+        spaceBetween: 50,
+        pagination: {
+            el: '.swiper-pagination-h',
+            clickable: true,
+        },
+    });
+    var swiperV = new Swiper('.swiper-container-v', {
+        direction: 'vertical',
+        spaceBetween: 50,
+        pagination: {
+            el: '.swiper-pagination-v',
+            clickable: true,
+        },
+    });
+</script>-->
+
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+    window.ga = function () {
+        ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('set', 'transport', 'beacon');
+    ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
