@@ -976,6 +976,10 @@
     .section-9__block-wrap__content-text {
         display: none;
     }
+    .section-10__block-social__wrap {
+        position: absolute;
+        left: 60px;
+    }
 
 }
 
