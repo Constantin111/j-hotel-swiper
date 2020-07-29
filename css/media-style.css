@@ -62,7 +62,7 @@
         position: relative;
     }
     .section-10__block-social__wrap {
-        position: relative;
+        position: absolute;
         left: 60px;
     }
 }
