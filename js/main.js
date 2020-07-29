@@ -2,8 +2,7 @@ $(function () {
     $(document).on("change keyup input click", "input[type='text']", function () {
         if (this.value.match(/[^0-9]/g)) {
             this.value = this.value.replace(/[^0-9]/g, "");
-        }
-        ;
+        };
     });
 
     $(document).on("change keyup input click", "#oldDay", function () {
@@ -26,7 +25,7 @@ $(function () {
         ;
     });
 
-    $(document).on("blur", "#oldYear", function () {
+    /*$(document).on("blur", "#oldYear", function () {
         var oldDay = $("#oldDay").val();
         var oldMonth = $("#oldMonth").val();
         var oldYear = $("#oldYear").val();
@@ -34,7 +33,7 @@ $(function () {
         if (thisValue > 2020 || thisValue < 1920) {
             alert('некоректное значение');
             $(this).val("");
-        }else if(oldDay =="" || oldMonth == "" || oldYear == ""){
+        } else if (oldDay == "" || oldMonth == "" || oldYear == "") {
             alert('Введите дату рождения');
         } else {
             $(".age-gate__block").removeClass('active');
@@ -50,11 +49,11 @@ $(function () {
             });
         }
         $(this).on('blur');
-    });
+    });*/
 
-    $(document).ready(function() {
-        $('#oldYear').keydown(function(e) {
-            if(e.keyCode === 13) {
+    $(document).ready(function () {
+        $('#oldYear').keydown(function (e) {
+            if (e.keyCode === 13) {
                 var oldDay = $("#oldDay").val();
                 var oldMonth = $("#oldMonth").val();
                 var oldYear = $("#oldYear").val();
@@ -62,7 +61,7 @@ $(function () {
                 if (thisValue > 2020 || thisValue < 1920) {
                     alert('некоректное значение');
                     $(this).val("");
-                }else if(oldDay =="" || oldMonth == "" || oldYear == ""){
+                } else if (oldDay == "" || oldMonth == "" || oldYear == "") {
                     alert('Введите дату рождения');
                 } else {
                     var url = "https://constantin111.github.io/j-hotel-swiper/swiper.html";
@@ -91,36 +90,42 @@ $(function () {
         var oldMonth = $("#oldMonth").val();
         var oldYear = $("#oldYear").val();
 
-        if (oldDay =="" || oldMonth == "" || oldYear == "") {
+        if (oldDay == "" || oldMonth == "" || oldYear == "") {
             alert('Введите дату рождения' + oldDay + oldMonth + oldYear);
 
         } else {
             var url = "https://constantin111.github.io/j-hotel-swiper/swiper.html";
             $(location).attr('href', url);
-            /*$(".age-gate__block").removeClass('active');
-            $(".post-age-gate__block").addClass("active");
-            new fullpage('#fullpage', {
-                navigation: true,
-                dragAndMove: true,
-                responsiveWidth: 370,
-                anchors: ['home', 'about-us', 'contact'],
-                parallax: true,
-                onLeave: function (origin, destination, direction) {
-                    console.log("Leaving section" + origin.index);
-                },
-            });*/
         }
     });
 
-    $('#oldDay').keyup(function(){
-        if($(this).val().length == 2){
+    $('#oldDay').keyup(function () {
+        if ($(this).val().length == 2) {
             $('#oldMonth').focus();
         }
     });
 
-    $('#oldMonth').keyup(function(){
-        if($(this).val().length == 2){
+    $('#oldMonth').keyup(function () {
+        if ($(this).val().length == 2) {
             $('#oldYear').focus();
+        }
+    });
+
+    $('#oldYear').keyup(function () {
+        if ($(this).val().length == 4) {
+            var oldDay = $("#oldDay").val();
+            var oldMonth = $("#oldMonth").val();
+            var oldYear = $("#oldYear").val();
+            var thisValue = this.value;
+
+            if (oldDay == "" || oldDay > 31 || oldMonth == "" || oldMonth > 12 || thisValue > 2020 || thisValue < 1920) {
+                alert('Введите дату рождения' + oldDay + oldMonth + oldYear);
+                $(this).val("");
+
+            } else {
+                var url = "https://constantin111.github.io/j-hotel-swiper/swiper.html";
+                $(location).attr('href', url);
+            }
         }
     });
 
