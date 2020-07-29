@@ -65,8 +65,8 @@ $(function () {
                 }else if(oldDay =="" || oldMonth == "" || oldYear == ""){
                     alert('Введите дату рождения');
                 } else {
-                    var url = "swiper.html";
-                    $(location).attr('href',url);
+                    var url = "https://constantin111.github.io/j-hotel-swiper/swiper.html";
+                    $(location).attr('href', url);
                     /*$(".age-gate__block").removeClass('active');
                     $(".post-age-gate__block").addClass("active");
                     new fullpage('#fullpage', {
@@ -95,8 +95,8 @@ $(function () {
             alert('Введите дату рождения' + oldDay + oldMonth + oldYear);
 
         } else {
-            var url = "swiper.html";
-            $(location).attr('href',url);
+            var url = "https://constantin111.github.io/j-hotel-swiper/swiper.html";
+            $(location).attr('href', url);
             /*$(".age-gate__block").removeClass('active');
             $(".post-age-gate__block").addClass("active");
             new fullpage('#fullpage', {
